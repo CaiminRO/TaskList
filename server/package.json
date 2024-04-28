@@ -1,0 +1,55 @@
+{
+  "name": "server",
+  "version": "0.1.0",
+  "description": "Task scheduler done as a personal project",
+  "main": "server.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "build": "tsc",
+    "watch": "tsc -w",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CaiminRO/TaskScheduler.git"
+  },
+  "author": "CaiminRO",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CaiminRO/TaskScheduler/issues"
+  },
+  "homepage": "https://github.com/CaiminRO/TaskScheduler#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "connect-pg-simple": "^9.0.1",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-flash": "^0.0.2",
+    "express-session": "^1.18.0",
+    "express-validator": "^7.0.1",
+    "http-errors": "^2.0.0",
+    "http-status-codes": "^2.3.0",
+    "module-alias": "^2.2.3",
+    "node-pg-migrate": "^7.2.0",
+    "pg": "^8.11.5",
+    "pg-promise": "^11.6.0"
+  },
+  "devDependencies": {
+    "@types/cookie-parser": "^1.4.7",
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.21",
+    "@types/express-session": "^1.18.0",
+    "@types/http-errors": "^2.0.4",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.12.7",
+    "@types/pg-promise": "^5.4.3",
+    "jest": "^29.7.0",
+    "nodemon": "^3.1.0",
+    "ts-jest": "^29.1.2",
+    "typescript": "^5.4.5"
+  }
+}

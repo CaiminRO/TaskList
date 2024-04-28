@@ -2,13 +2,16 @@
   "name": "server",
   "version": "0.1.0",
   "description": "Task scheduler done as a personal project",
-  "main": "server.js",
+  "main": "dist/index.js",
   "scripts": {
     "start": "node dist/index.js",
     "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
     "build": "tsc",
     "watch": "tsc -w",
-    "test": "jest"
+    "test": "jest",
+    "db:up": "node-pg-migrate up",
+    "db:down": "node-pg-migrate down",
+    "db:create": "node-pg-migrate create -- "
   },
   "repository": {
     "type": "git",
@@ -38,6 +41,7 @@
     "pg-promise": "^11.6.0"
   },
   "devDependencies": {
+    "@types/connect-pg-simple": "^7.0.3",
     "@types/cookie-parser": "^1.4.7",
     "@types/cors": "^2.8.17",
     "@types/dotenv": "^8.2.0",
@@ -46,6 +50,7 @@
     "@types/http-errors": "^2.0.4",
     "@types/jest": "^29.5.12",
     "@types/node": "^20.12.7",
+    "@types/pg": "^8.11.5",
     "@types/pg-promise": "^5.4.3",
     "jest": "^29.7.0",
     "nodemon": "^3.1.0",
